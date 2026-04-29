@@ -20,3 +20,14 @@ RUN cat "hello/world.txt"
     # 2. CMD ["executable", "param", "param"]
 
 CMD cat "hello/world.txt"
+
+# 4. LABEL (menambahkan metadata kedalam docker image yang dibuat -> menambahkan informasi saja )
+# LABEL instruction format :
+    # 1. LABEL <keys> = <value>
+
+LABEL author = "rayhanmarcello222"
+
+# 5. ADD (digunakan untuk menambahkan file dari source ke dalam folder destiation di docker image)
+
+ADD world.txt hello
+RUN echo "hello/world.txt"
